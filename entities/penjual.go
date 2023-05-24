@@ -1,8 +1,8 @@
 package entities
 
-type penjual struct {
-	id        int64
+type Penjual struct {
+	Id        int64
 	Nama      string
-	NoTelepon string
+	NoTelepon int64
 	Alamat    string
 }

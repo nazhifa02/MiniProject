@@ -1,0 +1,35 @@
+<body>
+
+    <div class="container mt-5">
+        <h3>Data Pasien</h3>
+        <a href="/penjual/add" class="btn btn-sm btn-primary">Tambah Data</a>
+        <h3>Data Barang</h3>
+        <a href="/penjual/add" class="btn btn-sm btn-primary">Tambah Data</a>
+        <hr/>
+        <table class="table table-sriped table-hover">
+            <thead>
+                <tr>
+                    
+                    <th>Nama</th>
+                    <th>NoTelepon </th>
+                    <th>Alamat </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+              
+                {{ range .penjual}}
+                    <tr>
+                     
+                        <td>{{ .Nama}}</td>
+                        <td>{{ .NoTelepon}}</td>
+                        <td>{{ .Alamat}}</td>
+                        
+                        <td>
+                            <a href="/penjual/edit?id={{.Id}}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="/penjual/delete?id={{.Id}}" onclick="return confirm('Aapakah anda yakin ingin menghapus data?')" class="btn btn-sm btn-danger">Hapus</a>
+                            <a href="/penjual/edit?id={{.Id}}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="/penjual/delete?id={{.Id}}" onclick="return confirm('Aapakah anda yakin ingin menghapus data?')" class="btn btn-sm btn-danger">Hapus</a>
+                        </td>
+                    </tr>
+                {{ end }}

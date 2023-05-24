@@ -1,9 +1,9 @@
 package entities
 
-type barang struct {
-	id    int64
+type Barang struct {
+	Id    int64
 	Nama  string
 	Jenis string
 	Harga string
-	Stok  string
+	Stok  int64
 }

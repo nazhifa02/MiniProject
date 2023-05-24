@@ -1,0 +1,35 @@
+<body>
+
+    <div class="container mt-5">
+        <h3>Data Pasien</h3>
+        <a href="/barang/add" class="btn btn-sm btn-primary">Tambah Data</a>
+        <h3>Data Barang</h3>
+        <a href="/barang/add" class="btn btn-sm btn-primary">Tambah Data</a>
+        <hr/>
+        <table class="table table-sriped table-hover">
+            <thead>
+                <tr>
+                    
+                    <th>Nama</th>
+                    <th>Jenis </th>
+                    <th>Harga </th>
+                    <th>Stok </th>
+                </tr>
+            </thead>
+            <tbody>
+              
+                {{ range .barang }}
+                    <tr>
+                     
+                        <td>{{ .Nama}}</td>
+                        <td>{{ .Jenis}}</td>
+                        <td>{{ .Harga }}</td>
+                        <td>{{ .Stok }}</td>
+                        <td>
+                            <a href="/barang/edit?id={{.Id}}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="/barang/delete?id={{.Id}}" onclick="return confirm('Aapakah anda yakin ingin menghapus data?')" class="btn btn-sm btn-danger">Hapus</a>
+                            <a href="/barang/edit?id={{.Id}}" class="btn btn-sm btn-warning">Edit</a>
+                            <a href="/barang/delete?id={{.Id}}" onclick="return confirm('Aapakah anda yakin ingin menghapus data?')" class="btn btn-sm btn-danger">Hapus</a>
+                        </td>
+                    </tr>
+                {{ end }}

@@ -1,4 +1,4 @@
-module github.com/jeypc/go-crud
+module github.com/nazhifa02/MiniProject
 
 go 1.20
 
