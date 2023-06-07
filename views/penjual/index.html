@@ -1,18 +1,18 @@
 <body>
 
     <div class="container mt-5">
-        <h3>Data Pasien</h3>
+        <h3>Data Penjual</h3>
         <a href="/penjual/add" class="btn btn-sm btn-primary">Tambah Data</a>
         <h3>Data Barang</h3>
-        <a href="/penjual/add" class="btn btn-sm btn-primary">Tambah Data</a>
+        <a href="/barang/add" class="btn btn-sm btn-primary">Tambah Data</a>
         <hr/>
         <table class="table table-sriped table-hover">
             <thead>
                 <tr>
+                    <td>{{ .Nama}}</td>
+                    <td>{{ .NoTelepon}}</td>
+                    <td>{{ .Alamat}}</td>
                     
-                    <th>Nama</th>
-                    <th>NoTelepon </th>
-                    <th>Alamat </th>
                     
                 </tr>
             </thead>
@@ -20,10 +20,12 @@
               
                 {{ range .penjual}}
                     <tr>
-                     
                         <td>{{ .Nama}}</td>
-                        <td>{{ .NoTelepon}}</td>
-                        <td>{{ .Alamat}}</td>
+                        <td>{{ .Jenis}}</td>
+                        <td>{{ .Harga }}</td>
+                        <td>{{ .Stok }}</td>
+                        
+                     
                         
                         <td>
                             <a href="/penjual/edit?id={{.Id}}" class="btn btn-sm btn-warning">Edit</a>

@@ -22,7 +22,7 @@
 <body>
 
     <div class="container mt-5">
-        <h3>Tambah Data penjual</h3>
+        <h3>Tambah Data Penjual</h3>
         <a href="/penjual" class="btn btn-sm btn-primary">Lihat Data</a>
         <hr/>
 
@@ -35,26 +35,25 @@
         <form action="/penjual/add" method="post">
             <div class="form-group">
                 <label for="">Nama </label>
-                <input type="text" name="Nama" value="{{ .penjual.Nama}}" class="form-control {{ if .validation.Nama }} is-invalid {{ end }}">
+                <input type="text" name="Nama" value="{{ .penjual.Nama }}" class="form-control {{ if .validation.Nama }} is-invalid {{ end }}">
                 <div class="invalid-feedback">
-                    {{ .validation.Nama}}
+                    {{ .validation.Nama }}
                 </div>
             </div>
             <div class="form-group">
-                <label for="">NoTelepon</label>
-                <input type="text" name="Jenis" value="{{ .penjual.NoTelepon }}" class="form-control {{ if .validation.NoTelepon }} is-invalid {{ end }}">
+                <label for="">No telepon</label>
+                <input type="text" name="Notelepon" value="{{ .penjual.Notelepon }}" class="form-control {{ if .validation.Notelepon }} is-invalid {{ end }}">
                 <div class="invalid-feedback">
-                    {{ .validation.NoTelepon}}
+                    {{ .validation.Notelepon }}
                 </div>
             </div>
             <div class="form-group">
-                <label for="">Alamat</label>
-                <input type="text" name="NoTelepon" value="{{ .penjual.Alamat }}" class="form-control {{ if .validation.Alamat} is-invalid {{ end }}">
+                <label for="">Alamat </label>
+                <input type="text" name="alamat" value="{{ .penjual.Alamat }}" class="form-control {{ if .validation.Alamat }} is-invalid {{ end }}">
                 <div class="invalid-feedback">
-                    {{ .validation.Alamat}}
+                    {{ .validation.Alamat }}
                 </div>
             </div>
-           
 
             <div class="form-group">
                 <button class="btn btn-primary btn-block" type="submit">SIMPAN</button>
